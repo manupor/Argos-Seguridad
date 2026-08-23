@@ -65,7 +65,7 @@ export default function Clients() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {testimonials.map((t) => (
                 <div key={t.id} className="bg-slate-50 rounded-xl border border-slate-200 p-6">
-                  <p className="text-slate-700 italic mb-4">"{t.text}"</p>
+                  <p className="text-slate-700 italic mb-4">&quot;{t.text}&quot;</p>
                   <p className="font-bold text-brand-900">{t.author}</p>
                   <p className="text-sm text-slate-500">{t.role}</p>
                 </div>

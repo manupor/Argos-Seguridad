@@ -1,59 +1,29 @@
-import { CheckCircle2 } from 'lucide-react'
 import { Link } from 'react-router-dom'
-import SectionHeader from '../components/SectionHeader'
-import FadeIn from '../components/FadeIn'
+import { ArrowUpRight, Check } from 'lucide-react'
 
-const highlights = [
-  'Más de 14 años de experiencia',
-  'Cobertura en todo Costa Rica',
-  'Ingenieros y técnicos certificados',
-  'Enfoque en seguridad y calidad',
-]
+const highlights = ['Prevención antes que reacción', 'Protocolos claros y supervisión constante', 'Servicio personalizado para cada entorno']
 
 export default function AboutHome() {
   return (
-    <section className="section bg-white">
-      <div className="container-site">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          <FadeIn direction="left">
-            <SectionHeader
-              label="Sobre nosotros"
-              title="Un aliado estratégico para su operación"
-              subtitle="Grupo Preventivo nace con el compromiso de ofrecer soluciones integrales en ingeniería y mantenimiento industrial."
-              centered={false}
-            />
-            <p className="text-slate-600 mb-6 leading-relaxed">
-              Grupo Preventivo nace con el compromiso de ofrecer soluciones integrales en ingeniería y mantenimiento industrial. 
-              A lo largo de más de 14 años hemos acompañado a empresas de diversos sectores, ayudándolas a prevenir fallas, 
-              cumplir normativas y mantener sus instalaciones funcionando con confiabilidad y eficiencia.
-            </p>
-            <ul className="space-y-3 mb-8">
-              {highlights.map((item) => (
-                <li key={item} className="flex items-center gap-3 text-slate-700">
-                  <CheckCircle2 className="w-5 h-5 text-energy-500 flex-shrink-0" />
-                  <span>{item}</span>
-                </li>
-              ))}
-            </ul>
-            <Link to="/nosotros" className="btn-primary">
-              Conozca nuestra historia
-            </Link>
-          </FadeIn>
-
-          <FadeIn direction="right" className="relative">
-            <div className="aspect-[4/3] rounded-2xl overflow-hidden shadow-xl">
-              <img
-                src="https://placehold.co/800x600/0b1f3a/60a5fa?text=Equipo+Grupo+Preventivo"
-                alt="Equipo de Grupo Preventivo"
-                className="w-full h-full object-cover"
-                loading="lazy"
-              />
-            </div>
-            <div className="absolute -bottom-6 -left-6 bg-white rounded-xl shadow-lg p-6 hidden md:block">
-              <p className="text-4xl font-extrabold text-brand-700">14+</p>
-              <p className="text-sm text-slate-600">años de experiencia</p>
-            </div>
-          </FadeIn>
+    <section id="nosotros" className="section bg-slate-50">
+      <div className="container-site grid items-center gap-14 px-5 sm:px-8 lg:grid-cols-[.85fr_1.15fr] lg:gap-24 lg:px-12">
+        <div className="relative">
+          <div className="absolute -left-4 -top-4 h-full w-full rounded-3xl border border-cyan-200" />
+          <div className="relative rounded-3xl bg-ink-950 p-8 text-white shadow-2xl sm:p-12">
+            <span className="text-7xl font-black leading-none text-cyan-300">01</span>
+            <p className="mt-12 max-w-xs text-2xl font-semibold leading-tight">Una mirada atenta cambia la forma de proteger.</p>
+            <div className="mt-16 h-px bg-white/15" />
+            <p className="mt-5 text-sm leading-relaxed text-slate-400">ARGOS SECURITY · Prevención, vigilancia y protección</p>
+          </div>
+        </div>
+        <div>
+          <p className="eyebrow">Nuestra filosofía</p>
+          <h2 className="section-title mt-4 max-w-2xl">La confianza se construye estando presentes.</h2>
+          <p className="mt-6 max-w-2xl text-lg leading-relaxed text-slate-600">En Argos Security entendemos que la seguridad no es solo reaccionar ante un incidente. Es conocer el entorno, anticipar riesgos y acompañar a nuestros clientes con profesionalismo.</p>
+          <ul className="mt-8 space-y-4">
+            {highlights.map((item) => <li key={item} className="flex items-center gap-3 font-semibold text-ink-900"><span className="flex h-7 w-7 items-center justify-center rounded-full bg-cyan-100 text-cyan-700"><Check className="h-4 w-4" /></span>{item}</li>)}
+          </ul>
+          <Link to="/nosotros" className="mt-9 inline-flex items-center gap-2 font-bold text-blue-700 hover:text-cyan-600">Conozca más sobre nosotros <ArrowUpRight className="h-4 w-4" /></Link>
         </div>
       </div>
     </section>

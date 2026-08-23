@@ -1,34 +1,5 @@
-import FadeIn from '../components/FadeIn'
-import SectionHeader from '../components/SectionHeader'
-import { benefits } from '../data/constants'
+import { BadgeCheck, Headphones, Radar, UserRoundCheck } from 'lucide-react'
 
-export default function WhyUs() {
-  return (
-    <section className="section bg-slate-50">
-      <div className="container-site">
-        <SectionHeader
-          label="¿Por qué elegirnos?"
-          title="Confianza construida con resultados"
-          subtitle="Combinamos experiencia, cobertura nacional y un equipo técnico capacitado para resolver sus necesidades."
-        />
+const values = [{ icon: Radar, title: 'Prevención activa', text: 'Observamos, evaluamos y actuamos antes de que aparezca el riesgo.' }, { icon: UserRoundCheck, title: 'Personal capacitado', text: 'Profesionales preparados para responder con criterio y respeto.' }, { icon: BadgeCheck, title: 'Protocolos confiables', text: 'Procedimientos claros, supervisión de puestos y control de novedades.' }, { icon: Headphones, title: 'Atención cercana', text: 'Comunicación directa y servicio personalizado para cada cliente.' }]
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {benefits.map((benefit, index) => {
-            const Icon = benefit.icon
-            return (
-              <FadeIn key={benefit.title} delay={index * 0.1}>
-                <div className="bg-white rounded-xl p-6 border border-slate-200 shadow-sm hover:shadow-md transition-shadow h-full">
-                  <div className="w-12 h-12 rounded-lg bg-brand-50 text-brand-700 flex items-center justify-center mb-4">
-                    <Icon className="w-6 h-6" />
-                  </div>
-                  <h3 className="text-lg font-bold text-brand-900 mb-2">{benefit.title}</h3>
-                  <p className="text-slate-600 text-sm">{benefit.description}</p>
-                </div>
-              </FadeIn>
-            )
-          })}
-        </div>
-      </div>
-    </section>
-  )
-}
+export default function WhyUs() { return <section className="section bg-slate-100"><div className="container-site px-5 sm:px-8 lg:px-12"><div className="grid gap-12 lg:grid-cols-[.8fr_1.2fr] lg:gap-24"><div><p className="eyebrow">Nuestro compromiso</p><h2 className="section-title mt-4">Cuidar con criterio. Responder con firmeza.</h2><p className="mt-5 leading-relaxed text-slate-600">La protección empieza con una estrategia que combina tecnología, experiencia humana y presencia constante.</p></div><div className="grid gap-x-8 gap-y-10 sm:grid-cols-2">{values.map(({ icon: Icon, title, text }) => <div key={title} className="border-t border-slate-300 pt-5"><Icon className="h-6 w-6 text-blue-700" /><h3 className="mt-4 font-bold text-ink-950">{title}</h3><p className="mt-2 text-sm leading-relaxed text-slate-600">{text}</p></div>)}</div></div></div></section> }

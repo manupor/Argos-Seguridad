@@ -2,7 +2,7 @@ import {
   Zap, Wrench, Cable, TowerControl, BatteryCharging, Activity,
   ShieldCheck, Search, Thermometer, Droplets, Trash2, Factory,
   Settings, Building2, Stethoscope, Hotel, UtensilsCrossed, Home,
-  Landmark, Briefcase, CheckCircle2, Clock, Users, MapPin, BadgeCheck,
+  Landmark, Briefcase, Clock, Users, MapPin, BadgeCheck,
   HardHat, Shield,
 } from 'lucide-react'
 

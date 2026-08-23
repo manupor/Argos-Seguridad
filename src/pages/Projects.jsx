@@ -42,11 +42,10 @@ export default function Projects() {
               <button
                 key={filter.value}
                 onClick={() => setActiveFilter(filter.value)}
-                className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
-                  activeFilter === filter.value
+                className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${activeFilter === filter.value
                     ? 'bg-brand-700 text-white'
                     : 'bg-white text-slate-700 border border-slate-200 hover:bg-slate-50'
-                }`}
+                  }`}
               >
                 {filter.label}
               </button>
@@ -73,7 +72,7 @@ export default function Projects() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {testimonials.map((t) => (
                 <div key={t.id} className="bg-white rounded-xl border border-slate-200 p-6 shadow-sm">
-                  <p className="text-slate-700 italic mb-4">"{t.text}"</p>
+                  <p className="text-slate-700 italic mb-4">&quot;{t.text}&quot;</p>
                   <p className="font-bold text-brand-900">{t.author}</p>
                   <p className="text-sm text-slate-500">{t.role}</p>
                 </div>
