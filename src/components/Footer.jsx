@@ -1,0 +1,4 @@
+import { Mail } from 'lucide-react'
+import { companyInfo } from '../data/constants'
+
+export default function Footer() { return <footer className="bg-ink-950 text-white"><div className="container-site flex flex-col gap-8 px-5 py-12 sm:px-8 md:flex-row md:items-end md:justify-between lg:px-12"><div><img src="/logo-argos.jpeg" alt="Argos Security" className="h-24 w-28 object-contain mix-blend-screen" /><p className="mt-5 max-w-sm text-sm leading-relaxed text-slate-400">Su seguridad, nuestra responsabilidad. Protección profesional para lo que más importa.</p></div><div className="md:text-right"><a href={`mailto:${companyInfo.email}`} className="inline-flex items-center gap-2 text-sm text-slate-300 hover:text-cyan-300"><Mail className="h-4 w-4 text-cyan-300" /> {companyInfo.email}</a><p className="mt-4 text-xs text-slate-500">© {new Date().getFullYear()} Argos Security. Todos los derechos reservados.</p></div></div></footer> }

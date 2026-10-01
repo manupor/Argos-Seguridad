@@ -1,0 +1,45 @@
+import { Mail, MapPin, ArrowUpRight } from 'lucide-react'
+import ContactForm from '../components/ContactForm'
+import { companyInfo } from '../data/constants'
+
+export default function ContactHome() {
+  return (
+    <section id="contacto" className="section relative overflow-hidden bg-ink-950">
+      <div className="container-site relative z-10 px-5 sm:px-8 lg:px-12">
+        <div className="grid gap-14 lg:grid-cols-[.8fr_1.2fr] lg:gap-24">
+          <div>
+            <p className="text-xs font-bold uppercase tracking-[.24em] text-cyan-300">Contacto</p>
+            <h2 className="section-title mt-4 text-white">Hablemos de cómo proteger lo suyo.</h2>
+            <p className="mt-5 leading-relaxed text-slate-300">
+              Cuéntenos sobre su espacio, su operación o su próximo evento. Nuestro equipo le ayudará a encontrar la cobertura adecuada.
+            </p>
+            <div className="mt-10 space-y-5">
+              <a href={`mailto:${companyInfo.email}`} className="flex items-center gap-4 text-white hover:text-cyan-300">
+                <span className="flex h-11 w-11 items-center justify-center rounded-full bg-cyan-100 text-blue-700">
+                  <Mail className="h-5 w-5" />
+                </span>
+                <span>
+                  <small className="block text-xs uppercase tracking-wider text-slate-400">Escríbanos</small>
+                  <strong className="text-sm">{companyInfo.email}</strong>
+                </span>
+              </a>
+              <div className="flex items-center gap-4 text-white">
+                <span className="flex h-11 w-11 items-center justify-center rounded-full bg-cyan-100 text-blue-700">
+                  <MapPin className="h-5 w-5" />
+                </span>
+                <span>
+                  <small className="block text-xs uppercase tracking-wider text-slate-400">Atención</small>
+                  <strong className="text-sm">Servicio personalizado</strong>
+                </span>
+              </div>
+            </div>
+            <a href={`mailto:${companyInfo.email}`} className="mt-10 inline-flex items-center gap-2 font-bold text-cyan-300 hover:text-white">
+              Enviar un correo <ArrowUpRight className="h-4 w-4" />
+            </a>
+          </div>
+          <ContactForm />
+        </div>
+      </div>
+    </section>
+  )
+}
