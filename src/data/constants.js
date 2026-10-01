@@ -230,7 +230,7 @@ export const companyInfo = {
   name: 'Argos Security',
   slogan: 'Seguridad privada profesional',
   phone: '+506 7243 7781',
-  email: 'info@argossecurity.com',
+  email: 'sociedad.anonima.juarez@gmail.com',
   address: 'Costa Rica',
   schedule: 'Lunes a domingo: 24 horas',
   years: 14,
